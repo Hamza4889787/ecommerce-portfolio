@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import { useState, useEffect } from "react";
 
 const logoNames = [
   "Amazon",
@@ -110,9 +111,16 @@ const skillCategories = [
 ];
 
 export default function SkillsSection() {
+  const [sliderKey, setSliderKey] = useState(0);
+
+  useEffect(() => {
+    // Force slider to recalc width on mount for mobile
+    setSliderKey(1);
+  }, []);
+
   const logoSettings = {
     dots: false,
-    arrows: false, // Hide arrows
+    arrows: false,
     infinite: true,
     speed: 4000,
     slidesToShow: 5,
@@ -142,7 +150,7 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="bg-[#0D0D0D] text-white py-20 px-6">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1200px] w-full">
         {/* Heading */}
         <motion.h2
           initial={{ y: 20, opacity: 0 }}
@@ -159,14 +167,14 @@ export default function SkillsSection() {
 
         {/* Brand Slider */}
         <div className="w-full mb-14">
-          <Slider {...logoSettings}>
+          <Slider key={`logo-${sliderKey}`} {...logoSettings}>
             {logoNames.map((name, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="px-4 flex justify-center items-center"
+                className="px-2 sm:px-4 flex justify-center items-center"
               >
                 <div className="bg-[#4A90E2] text-white px-8 py-6 rounded-full text-xl font-semibold shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer w-full max-w-[200px] text-center">
                   {name}
@@ -177,7 +185,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Skill Categories Slider */}
-        <Slider {...categorySettings}>
+        <Slider key={`category-${sliderKey}`} {...categorySettings}>
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.title}

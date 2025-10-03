@@ -25,7 +25,7 @@ export default function SalesCarousel() {
 
   return (
     <section className="bg-[#0D0D0D] text-white py-20 px-6">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto w-full">
         <h2 className="text-3xl font-bold text-center text-[#4A90E2] mb-10">
           Sales Results
         </h2>
