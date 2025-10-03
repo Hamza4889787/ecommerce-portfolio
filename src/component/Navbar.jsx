@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full bg-[#0D0D0D] z-50 shadow-md">
-      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-16 md:pt-0">
         {/* Brand */}
         <motion.a
           href="#hero"

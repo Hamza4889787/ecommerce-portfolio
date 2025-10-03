@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="bg-[#0D0D0D] text-white flex items-center justify-center min-h-screen px-4"
+      className="bg-[#0D0D0D] text-white flex items-center justify-center min-h-screen px-4 mt-12 md:mt-0"
     >
       <div className="max-w-[1200px] w-full flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-10">
         {/* Text Section */}
