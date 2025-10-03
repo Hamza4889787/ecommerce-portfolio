@@ -179,9 +179,9 @@ export default function SkillsSection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="px-2 flex justify-center items-center w-full"
               >
-                <div className="bg-[#4A90E2] text-white px-6 py-4 rounded-full text-xl font-semibold shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer w-full max-w-[180px] text-center">
+                <div className="bg-[#4A90E2] text-white px-4 py-3 rounded-full text-sm sm:text-base font-semibold shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px]">
                   {name}
-                </div>
+                </div>{" "}
               </motion.div>
             ))}
           </Slider>
