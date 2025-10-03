@@ -15,8 +15,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-[#0D0D0D] z-50 shadow-md">
-      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-16 md:pt-0">
+    <nav className="fixed top-0 left-0 w-full bg-[#0D0D0D] z-50 shadow-md m-0 p-0">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between h-16 px-4 md:px-6">
         {/* Brand */}
         <motion.a
           href="#hero"
@@ -57,9 +57,9 @@ export default function Navbar() {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-[#0D0D0D] w-full px-6 py-4"
+          className="md:hidden bg-[#0D0D0D] w-full px-4 py-4"
         >
-          <ul className="flex flex-col gap-4 text-gray-300 font-medium">
+          <ul className="flex flex-col gap-4 text-gray-300 font-medium m-0 p-0">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a

@@ -114,7 +114,7 @@ export default function SkillsSection() {
   const [sliderKey, setSliderKey] = useState(0);
 
   useEffect(() => {
-    // Force slider to recalc width on mount for mobile
+    // Force re-render on mobile for proper slick width calculation
     setSliderKey(1);
   }, []);
 
@@ -128,9 +128,10 @@ export default function SkillsSection() {
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
+    adaptiveHeight: true,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 4 } },
-      { breakpoint: 768, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
       { breakpoint: 480, settings: { slidesToShow: 2 } },
     ],
   };
@@ -142,15 +143,17 @@ export default function SkillsSection() {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: false,
+    adaptiveHeight: true,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
 
   return (
-    <section id="skills" className="bg-[#0D0D0D] text-white py-20 px-6">
-      <div className="mx-auto max-w-[1200px] w-full">
+    <section id="skills" className="bg-[#0D0D0D] text-white py-20 px-4 sm:px-6">
+      <div className="mx-auto max-w-[1200px] w-full overflow-hidden">
         {/* Heading */}
         <motion.h2
           initial={{ y: 20, opacity: 0 }}
@@ -174,9 +177,9 @@ export default function SkillsSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="px-2 sm:px-4 flex justify-center items-center"
+                className="px-2 flex justify-center items-center w-full"
               >
-                <div className="bg-[#4A90E2] text-white px-8 py-6 rounded-full text-xl font-semibold shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer w-full max-w-[200px] text-center">
+                <div className="bg-[#4A90E2] text-white px-6 py-4 rounded-full text-xl font-semibold shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer w-full max-w-[180px] text-center">
                   {name}
                 </div>
               </motion.div>
@@ -193,9 +196,9 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="p-4"
+              className="p-2 sm:p-4 w-full"
             >
-              <div className="bg-[#1A1A1A] rounded-2xl p-6 h-[300px] flex flex-col justify-between border border-transparent hover:border-[#4A90E2] transition-all duration-300 shadow-md hover:shadow-[#4A90E2]/30">
+              <div className="bg-[#1A1A1A] rounded-2xl p-6 h-[300px] flex flex-col justify-between border border-transparent hover:border-[#4A90E2] transition-all duration-300 shadow-md hover:shadow-[#4A90E2]/30 w-full">
                 <div>
                   <div className="text-4xl mb-4">{cat.icon}</div>
                   <h3 className="text-xl font-semibold text-[#4A90E2] mb-2">
