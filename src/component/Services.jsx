@@ -14,8 +14,8 @@ import {
 const services = [
   {
     icon: <ShoppingBag size={36} />,
-    title: "Amazon Account Management",
-    desc: "Complete Amazon store management including product uploads, order fulfillment, promotions, inventory control, and performance tracking for maximum efficiency.",
+    title: "Account Management",
+    desc: "Complete stores management including product uploads, order fulfillment, promotions, inventory control, and performance tracking for maximum efficiency.",
   },
   {
     icon: <PenTool size={36} />,
@@ -29,7 +29,7 @@ const services = [
   },
   {
     icon: <TrendingUp size={36} />,
-    title: "PPC Campaign Management",
+    title: "Campaign Management",
     desc: "Setting up and optimizing Amazon PPC and eBay campaigns, including Sponsored Ads, bid adjustments, and promotion strategies to maximize ROI.",
   },
   {
@@ -40,7 +40,7 @@ const services = [
   {
     icon: <Globe size={36} />,
     title: "Multi-Platform Support",
-    desc: "Managing Amazon, eBay, Shopify, and other platforms to expand brand presence and improve cross-platform sales performance.",
+    desc: "Managing Amazon, eBay and other platforms to expand brand presence and improve cross-platform sales performance.",
   },
   {
     icon: <Search size={36} />,
