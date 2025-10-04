@@ -59,6 +59,11 @@ export default function Footer() {
                 Services
               </a>
             </li>
+            <li>
+              <a href="#about" className="hover:text-[#4A90E2] transition">
+                About
+              </a>
+            </li>
 
             <li>
               <a href="#contact" className="hover:text-[#4A90E2] transition">

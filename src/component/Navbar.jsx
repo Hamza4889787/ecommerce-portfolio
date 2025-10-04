@@ -6,8 +6,9 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const navLinks = [
   { name: "Home", href: "#hero" },
   { name: "Skills", href: "#skills" },
+  { name: "Sales", href: "#case-studies" },
   { name: "Services", href: "#services" },
-  { name: "Brands", href: "#case-studies" },
+  { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
 
