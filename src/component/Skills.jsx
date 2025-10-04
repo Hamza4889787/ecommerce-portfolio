@@ -96,11 +96,10 @@ const skillCategories = [
   },
   {
     icon: "📋",
-    title: "Task & Project Management",
+    title: "Task Management",
     desc: "Organizing, prioritizing, and tracking tasks efficiently using tools like Trello and Monday.com to ensure timely completion, team collaboration, and streamlined workflow.",
     items: [
       "Task Prioritization",
-      "Project Planning",
       "Workflow Management",
       "Trello",
       "Monday.com",
